@@ -41,6 +41,18 @@ $(document).ready(function(){
             prevEl: ".swiper-testimonials-button-prev",
           },
     });
+    var swiperThumbs = new Swiper(".product-detail", {
+        spaceBetween: 30,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+    new Swiper(".product-detail2", {
+        spaceBetween: 10,
+        thumbs: {
+          swiper: swiperThumbs,
+        },
+      });
     $(".my-rating").starRating({
         totalStars: 5,
         starShape: 'rounded',
@@ -65,3 +77,24 @@ $(document).ready(function(){
         },
     });
 })
+        let counterValue = 1;
+
+        function increaseValue() {
+            counterValue++;
+            updateCounter();
+        }
+
+        function decreaseValue() {
+            if (counterValue > 1) {
+                counterValue--;
+                updateCounter();
+            }
+        }
+
+        function updateCounter() {
+            document.getElementById('counter').innerText = counterValue;
+            document.getElementById('decrease').disabled = counterValue === 1;
+        }
+
+        // Initialize the counter display
+        updateCounter();
