@@ -13,6 +13,20 @@ $(document).ready(function(){
             prevEl: ".swiper-best-seller-button-prev",
           },
     });
+    new Swiper(".top-selling", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        centeredSlides: true,
+        breakpoints: {
+            768: {
+                centeredSlides: false,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-top-selling-button-next",
+            prevEl: ".swiper-top-selling-button-prev",
+          },
+    });
     new Swiper(".testimonials", {
         slidesPerView: "auto",
         spaceBetween: 30,
@@ -42,5 +56,12 @@ $(document).ready(function(){
         activeColor: '#F2BC1B',
         strokeWidth: 10,
         starSize: 18
+    });
+    new Swiper('.mix-match', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-mix-match-pagination',
+        },
     });
 })
