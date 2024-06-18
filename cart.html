@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhshop - Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/star-rating.svg.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+        <div class="bg-secondary">
+            <div class="container text-center py-2">
+                <p class="text-[12px] lg:text-sm text-white">LIMITED OFFER: 30% OFF. Use RABBIT30 at Checkout. <span class="pl-4">23 : 15 : 00</span></p>
+            </div>
+        </div>
+        <div class="pt-4 lg:border-b lg:border-neutral-400">
+            <div class="container">
+                <div class="flex flex-wrap lg:flex-nowrap justify-between lg:gap-8">
+                    <div class="order-1 flex items-center space-x-4 lg:-ml-9">
+                        <button class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                            </svg>
+                        </button>
+                        <div class="">
+                            <a href="">
+                                <img srcset="./assets/images/Logo.png 2x" alt="" class="w-[119px] lg:w-full">
+                            </a>
+                        </div>
+                    </div>
+                    <form action="" class="order-3 lg:order-2 flex gap-2 lg:gap-8 w-full lg:w-auto lg:border-none border-y border-[#F4F4F4] lg:py-0 py-3 lg:mt-0 mt-3">
+                        <input type="text" placeholder="Search" class="w-full py-2 px-5 lg:py-3 lg:px-6 rounded-full bg-white border border-gray-200 lg:w-[400px]">
+                        <button type="submit" class="bg-primary rounded-full w-[50px] h-[42px] lg:w-12 lg:h-12 flex items-center" >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lg:size-6 size-5 text-white mx-auto">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                              </svg>
+                        </button>
+                    </form>
+                    <div class="order-2 lg:order-3 flex items-center gap-6 lg:-mr-9">
+                        <a href="" class="text-sm lg:text-base">Your Account</a> | 
+                        <button class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                            <span class="w-4 h-4 rounded-full bg-red-500 text-white absolute -top-1 -right-1 text-[12px]">1</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden lg:block">
+            <div class="container">
+                <nav>
+                    <ul class="lg:flex items-center justify-center space-x-10 text-base text-[#46494F]">
+                        <li><a href="" class="block py-4">Shop All</a></li>
+                        <li><a href="" class="block py-4">Flower</a></li>
+                        <li><a href="" class="block py-4">Edibles</a></li>
+                        <li><a href="" class="block py-4">Concentrates</a></li>
+                        <li><a href="" class="block py-4">Mushrooms</a></li>
+                        <li><a href="" class="block py-4">Promotions/Bundles</a></li>
+                        <li><a href="" class="block py-4">Support</a></li>
+                        <li><a href="" class="block py-4">Rewards</a></li>
+                        <li><a href="" class="block py-4">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="bg-[#F4F4F4] py-4 lg:py-7">
+            <div class="container flex items-center justify-center gap-4">
+                <div class="flex items-center gap-2">
+                    <img src="./assets/svg/icons/bag-2.svg" alt="" class="w-[30px] h-[30px] bg-[#05422C] p-2 rounded-full">
+                    <h4 class="text-[#060709] text-sm/[150%] font-medium">Shopping Cart</h4>
+                </div>
+                <hr class="text-[#C3D2CC] w-10 lg:w-[75px]">
+                <div class="flex items-center gap-2">
+                    <img src="./assets/svg/icons/wallet.svg" alt="" class="w-[30px] h-[30px] bg-[#FFF] p-2 rounded-full"> 
+                    <h4 class="text-[#717378] text-sm/[150%] lg:block hidden">Checkout</h4>
+                </div>
+                <hr class="text-[#C3D2CC] w-10 lg:w-[75px]">
+                <div class="flex items-center gap-2">
+                    <img src="./assets/svg/icons/ticket-2.svg" alt="" class="w-[30px] h-[30px] bg-[#FFF] p-2 rounded-full"> 
+                    <h4 class="text-[#717378] text-sm/[150%] lg:block hidden">Order Complete</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="pt-6 lg:pt-8 mb-[64px] lg:mb-[100px]">
+        <div class="container">
+            <div class="lg:grid lg:grid-cols-[686px,auto] gap-[64px]">
+                <div>
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-[#060709] text-xl/[150%]">Your Cart</h2>
+                        <p class="text-[#9D9EA2] text-base/[150%] font-light">(3)</p>
+                    </div>
+                    <hr class="text-[#C8C9CB] my-6">
+                    <div class="space-y-3">
+                        <div class="lg:flex items-center gap-24 lg:space-y-0 space-y-3">
+                            <div class="flex items-center gap-4">
+                                <a class="border border-[#F4F4F4] rounded-md p-1">
+                                    <img src="./assets/images/products/product2.png" alt="" class="w-10">
+                                </a>
+                                <h4 class="text-[#9D9EA2] text-sm">1x Khalifa Kush (AAAA)</h4>
+                            </div>
+                            <div class="flex flex-1 items-center justify-between lg:ml-0 ml-[54px]">
+                                <div class="flex items-center gap-5">
+                                    <div class="flex items-center">
+                                        <button id="decrease" class="w-8 h-8 text-sm" onclick="decreaseValue()">-</button>
+                                        <div id="counter" class="bg-[#F4F4F4] rounded w-8 h-8 flex items-center justify-center text-sm">1</div>
+                                        <button id="increase" class="w-8 h-8 text-sm" onclick="increaseValue()">+</button>
+                                    </div>
+                                    <span class="text-[#060709] text-sm">$120.00</span>
+                                </div>
+                                <span class="text-[#9D9EA2] text-sm">$240.00</span>
+                            </div>
+                        </div>
+                        <div class="lg:flex items-center gap-24 lg:space-y-0 space-y-3">
+                            <div class="ml-[65px]">
+                                <h4 class="text-[#9D9EA2] text-sm">Add Integra Pack - 4g</h4>
+                            </div>
+                            <div class="flex flex-1 items-center justify-between lg:ml-0 ml-[54px]">
+                                <div class="flex items-center gap-5">
+                                    <div class="flex items-center">
+                                        <button id="decrease" class="w-8 h-8 text-sm" onclick="decreaseValue()">-</button>
+                                        <div id="counter" class="bg-[#F4F4F4] rounded w-8 h-8 flex items-center justify-center text-sm">1</div>
+                                        <button id="increase" class="w-8 h-8 text-sm" onclick="increaseValue()">+</button>
+                                    </div>
+                                    <span class="text-[#060709] text-sm">$2.00</span>
+                                </div>
+                                <span class="text-[#9D9EA2] text-sm">$2.00</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between lg:space-y-0 space-y-3">
+                            <div class="ml-[65px]">
+                                <h4 class="text-[#9D9EA2] text-sm">Subtotal</h4>
+                            </div>
+                            <span class="text-[#060709] text-sm">$245.00</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mt-6">
+                        <div class="lg:flex items-center gap-24 lg:space-y-0 space-y-3">
+                            <div class="flex items-center gap-4">
+                                <a class="border border-[#F4F4F4] rounded-md p-1">
+                                    <img src="./assets/images/products/product3.png" alt="" class="w-10">
+                                </a>
+                                <h4 class="text-[#9D9EA2] text-sm">1x Jungle Diamond (AA+)</h4>
+                            </div>
+                            <div class="flex flex-1 items-center justify-between lg:ml-0 ml-[54px]">
+                                <div class="flex items-center gap-5">
+                                    <div class="flex items-center">
+                                        <button id="decrease" class="w-8 h-8 text-sm" onclick="decreaseValue()">-</button>
+                                        <div id="counter" class="bg-[#F4F4F4] rounded w-8 h-8 flex items-center justify-center text-sm">1</div>
+                                        <button id="increase" class="w-8 h-8 text-sm" onclick="increaseValue()">+</button>
+                                    </div>
+                                    <span class="text-[#060709] text-sm">$200.00</span>
+                                </div>
+                                <span class="text-[#060709] text-sm">$200.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mt-6">
+                        <div class="lg:flex items-center gap-24 lg:space-y-0 space-y-3">
+                            <div class="flex items-center gap-4">
+                                <a class="border border-[#F4F4F4] rounded-md p-1">
+                                    <img src="./assets/images/products/product4.png" alt="" class="w-10">
+                                </a>
+                                <h4 class="text-[#9D9EA2] text-sm">Shipwreck Edibles Gummy</h4>
+                            </div>
+                            <div class="flex flex-1 items-center justify-between lg:ml-0 ml-[54px]">
+                                <div class="flex items-center gap-5">
+                                    <div class="flex items-center">
+                                        <button id="decrease" class="w-8 h-8 text-sm" onclick="decreaseValue()">-</button>
+                                        <div id="counter" class="bg-[#F4F4F4] rounded w-8 h-8 flex items-center justify-center text-sm">1</div>
+                                        <button id="increase" class="w-8 h-8 text-sm" onclick="increaseValue()">+</button>
+                                    </div>
+                                    <span class="text-[#060709] text-sm">$13.00</span>
+                                </div>
+                                <span class="text-[#060709] text-sm">$52.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="text-[#F4F4F4] my-6">
+                    <hr class="text-[#F4F4F4] my-6">
+                    <section>
+                        <div class="lg:grid grid-cols-3 gap-x-6">
+                            <div class="space-y-4"> 
+                                <h4 class="text-[#17AF26] text-base/[150%]">Delivery</h4>
+                                <div class="border border-[#F4F4F4] rounded-xl p-4 space-y-4">
+                                    <div class="rounded-full w-12 h-12 p-[13px] bg-[#F2F6F4] ">
+                                        <img src="./assets/svg/icons/transaction-minus.svg" alt="" class="">
+                                    </div>
+                                    <h4 class="text-[#1A1E26] text-lg/[150%]">Order by 10pm for free next day delivery on Orders overs $100</h4>
+                                    <p class="text-[#717378] text-base/[150%]">We deliver Monday to Saturday - excluding Holidays</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4"> 
+                                <br class="lg:block hidden">
+                                <div class="border border-[#F4F4F4] rounded-xl p-4 space-y-4">
+                                    <div class="rounded-full w-12 h-12 p-[13px] bg-[#F2F6F4] ">
+                                        <img src="./assets/svg/icons/box-time.svg" alt="">
+                                    </div>
+                                    <h4 class="text-[#1A1E26] text-lg/[150%]">Free next day delivery to stores.</h4>
+                                    <p class="text-[#717378] text-base/[150%]">Home delivery is $4.99 for orders under $100 and is FREE for all orders over $100    </p>
+                                </div>
+                            </div>
+                            <div class="space-y-4 lg:mt-0 mt-5"> 
+                                <h4 class="text-[#17AF26] text-base/[150%]">Free Returns</h4>
+                                <div class="border border-[#F4F4F4] rounded-xl p-4 space-y-4">
+                                    <div class="w-12 h-12 p-[13px] bg-[#F2F6F4] rounded-full">
+                                        <img src="./assets/svg/icons/truck-time.svg" alt="" >
+                                    </div>
+                                    <p class="text-[#717378] text-base/[150%]">30 days to return it to us for a refund. We have made returns SO EASY - you can now return your order to a store or send it with FedEx FOR FREE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="lg:mt-0 mt-8">
+                    <div class="p-6 border border-[#F4F4F4] rounded-2xl">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-[#9D9EA2] text-sm/[150%]">Subtotal</h4>
+                                <span class="text-[#060709] text-sm/[150%]">$497.00</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-[#9D9EA2] text-sm/[150%]">Discount</h4>
+                                <span class="text-[#060709] text-sm/[150%]">$0.0</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <h4 class="text-[#9D9EA2] text-sm/[150%]">Shipping Costs</h4>
+                                <span class="text-[#060709] text-sm/[150%]">$50.00</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-5 gap-2">
+                            <input type="text" placeholder="Coupon code" class="px-6 py-3 rounded-lg border border-[#F4F4F4]"> 
+                            <button class="text-[#17AF26] text-sm font-medium px-5 py-3 rounded-full bg-[#F3FBF4]">Apply Coupon</button>
+                        </div>
+                        <div class="border-y border-[#F4F4F4] mt-5 pt-4">
+                            <div class="flex w-full h-2 bg-[#F4F4F4] rounded-full mb-[16px]">
+                                <div class="w-7/12 bg-[#17AF26] rounded-full"></div>
+                            </div>
+                            <p class="text-[#717378] text-sm/[150%]">Get <span class="font-medium">Free</span> <span class="font-medium text-[#1A1E26]">Shipping</span> for orders over <span class="text-[#EB2606]">$100.00</span></p>
+                            <p class="text-[#1A1E26] text-sm/[150%] underline font-medium mt-[6px]">Continue Shopping</p>
+                            <button class="btn btn-lg !bg-[#C8C9CB] mt-5 lg:!h-[56px] lg:!leading-[56px] !leading-[48px] !h-[48px] lg:!px-[100px] !px-[70px] lg:!text-base !text-sm">Checkout <span class="px-4">|</span> <span>$547.00</span></button>
+                        </div>
+                        <div class="space-y-4 mt-5">
+                            <h4 class="text-[#717378] text-[12px]/[150%] tracking-[1px] font-light">SECURE PAYMENTS PROVIDED BY</h4>
+                            <div class="flex items-center gap-3">
+                                <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                    <img src="./assets/svg/bank3.svg" alt="">
+                                </a>
+                                <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                    <img src="./assets/svg/bank4.svg" alt="">
+                                </a>
+                                <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                    <img src="./assets/svg/bank2.svg" alt="">
+                                </a>
+                                <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                    <img src="./assets/svg/bank1.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <section class="relative -mb-[178px] lg:-mb-[229px] z-50">
+        <div class="container">
+            <div class="bg-[#05422C] lg:h-[458px] rounded-3xl p-6 lg:p-[64px]">
+                <h2 class="text-white text-[32px]/[120%] -tracking-[1.5px] lg:text-[64px]/[110%] lg:-tracking-[4px] font-semibold w-9/12">UNLOCK 20% OFF YOUR FIRST ORDER</h2>
+                <p class="text-[#C3D2CC] text-sm/[150%] lg:text-xl/[150%] mt-4 lg:mt-6">Reveal coupon code by entering your email</p>
+                <hr class="border border-[#346654] my-4 lg:my-8">
+                <form action="" class="lg:flex items-center lg:space-x-8">
+                    <input type="text" placeholder="Email Address" class="w-full rounded-full px-6 py-4 lg:py-6 lg:px-[44px] border border-[#346654]">
+                    <button class="bg-primary rounded-full text-white inline-block text-base/[150%] transition ease-in-out duration-300  py-4 px-4 lg:py-6 lg:w-[200px] hover:bg-green-700 hover:shadow-md lg:mt-0 mt-3 w-full">Reveal coupon</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="pb-[64px]">
+        <div class="container pt-[240px] lg:pt-[380px]">
+            <div class="grid lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-4">
+                    <img src="./assets/images/Logo-footer.svg" alt="">
+                    <p class="text-[#9D9EA2] text-base mt-6 lg:w-9/12">#1 Canadian top rated online dispensary that meets the customers needs in every single medical marijuana aspect. The team here at TopShelfBC is heavily involved in the Canadian cannabis industry for over 15 years. We strive to provide the top quality products, service and care at the lowest prices you’ll ever find.</p>
+                </div>
+                <div class="lg:col-span-8 space-y-8 lg:space-y-10">
+                    <div>
+                        <h4 class="text-xl text-white uppercase mb-6">QUICK LINK</h4>
+                        <ul class="columns-2 *:mb-4">
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Track Your Order</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Shop All</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Flower</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Edibles</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Concentrates</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Refunds</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Mushrooms</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Promotions / Bundles</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Support</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Reward</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Blog</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Shipping Faq</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl text-white uppercase mb-6">CONTACT US</h4>
+                        <ul>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">info@topshelfbc.cc</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl text-white uppercase mb-6">MORE</h4>
+                        <ul class="columns-2 *:mb-4">
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Canada</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in New Brunswick</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Prince Edward Island</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Northwest Territories</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Saskatchewan</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Manitoba</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Quitebec</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in British Columbia</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Ontario</a></li>
+                            <li><a href="" class="text-[#9D9EA2] text-sm ">Buy weed online in Alberta</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="" class="bg-white rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                            <img src="./assets/svg/bank3.svg" alt="">
+                        </a>
+                        <a href="" class="bg-white rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                            <img src="./assets/svg/bank4.svg" alt="">
+                        </a>
+                        <a href="" class="bg-white rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                            <img src="./assets/svg/bank2.svg" alt="">
+                        </a>
+                        <a href="" class="bg-white rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                            <img src="./assets/svg/bank1.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between border-t border-[#46494F] mt-[64px] pt-10">
+                <p class="order-2 lg:order-1 text-[#9D9EA2] text-base lg:mt-0 mt-10">© 2022 Top Shelf BC. All Rights Reserved.</p>
+                <ul class="order-1 lg:order-2 flex items-center lg:gap-8 gap-4">
+                    <li><a href="" class="text-[#9D9EA2] text-sm ">Out Of Stock</a></li>
+                    <li><a href="" class="text-[#9D9EA2] text-sm ">Privacy Policy</a></li>
+                    <li><a href="" class="text-[#9D9EA2] text-sm ">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.star-rating.svg.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
