@@ -98,3 +98,36 @@ $(document).ready(function(){
 
         // Initialize the counter display
         updateCounter();
+
+        const minRange = document.getElementById('min-range');
+const maxRange = document.getElementById('max-range');
+const minValue = document.getElementById('min-value');
+const maxValue = document.getElementById('max-value');
+
+function setSliderValues() {
+    const min = parseInt(minRange.value);
+    const max = parseInt(maxRange.value);
+
+    if (min > max) {
+        const temp = minRange.value;
+        minRange.value = maxRange.value;
+        maxRange.value = temp;
+    }
+
+    minValue.textContent = `$${parseFloat(minRange.value).toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })}`;
+
+    maxValue.textContent = `$${parseFloat(maxRange.value).toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })}`;
+}
+
+// Gọi hàm setSliderValues() khi thanh kéo thay đổi giá trị
+minRange.addEventListener('input', setSliderValues);
+maxRange.addEventListener('input', setSliderValues);
+
+// Gọi hàm setSliderValues() khi trang được tải
+setSliderValues();

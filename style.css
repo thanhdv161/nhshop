@@ -37,6 +37,73 @@ body{
 footer {
     background: linear-gradient(180deg, #1a1e26 0%, #01100b 100%);
 }
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 12px; /* Add margin to create space between values and slider */
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interference between the sliders */
+    z-index: 2; /* Ensure sliders are above the track */
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    pointer-events: all; /* Allow interaction with the thumbs */
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    pointer-events: all; /* Allow interaction with the thumbs */
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-track {
+    width: 100%;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure track is below the sliders */
+}
+
+.slider-values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-values span {
+    background: #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
 .custom-radio input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
