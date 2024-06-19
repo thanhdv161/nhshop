@@ -12,6 +12,7 @@ export default defineConfig({
                 review: resolve(__dirname, './product-review.html'),
                 connect: resolve(__dirname, './product-connect.html'),
                 cart: resolve(__dirname, './cart.html'),
+                checkout: resolve(__dirname, './checkout.html'),
             },
         },
     },
