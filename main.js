@@ -61,14 +61,19 @@ $(document).ready(function(){
         strokeWidth: 10,
         starSize: 16
     });
-    $(".rating-review").starRating({
-        totalStars: 5,
-        starShape: 'rounded',
-        hoverColor: '#F2BC1B',
-        activeColor: '#F2BC1B',
-        strokeWidth: 10,
-        starSize: 18
-    });
+    // Initialize Star Rating
+    if ($.fn.starRating) {
+        $(".rating-review").starRating({
+          totalStars: 5,
+          starShape: 'rounded',
+          hoverColor: '#F2BC1B',
+          activeColor: '#F2BC1B',
+          strokeWidth: 10,
+          starSize: 16,
+        });
+      } else {
+        console.error("starRating plugin is not loaded.");
+      }
     new Swiper('.mix-match', {
         slidesPerView: 1,
         spaceBetween: 30,
