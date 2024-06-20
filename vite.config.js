@@ -13,6 +13,7 @@ export default defineConfig({
                 connect: resolve(__dirname, './product-connect.html'),
                 cart: resolve(__dirname, './cart.html'),
                 checkout: resolve(__dirname, './checkout.html'),
+                ordercomplete: resolve(__dirname, './order-complete.html')
             },
         },
     },
