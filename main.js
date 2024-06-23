@@ -76,35 +76,50 @@ $(document).ready(function(){
             el: '.swiper-mix-match-pagination',
         },
     });
+
+    //check-cart
+    const cartIcon = document.querySelector('.cart-icon');
+    const cartEmpty = document.querySelector('.cart-empty');
+    const cartCount = document.querySelector('.cart-count');
+    const count = parseInt(cartCount.textContent, 10);
+    const cart = document.querySelector('.cart');
+    const cartItems = document.querySelector('.cart-items');
+    const cartOverlay = document.querySelector('.cart-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+
+    function toggleCartState() {
+    if (count > 0) {
+            cartEmpty.style.display = 'none';
+            cartItems.style.display = 'block';
+        } else {
+            cartEmpty.style.display = 'block';
+            cartItems.style.display = 'none';
+        }
+    }
+
+    function openCart() {
+        cart.classList.toggle('open');
+        cartOverlay.classList.toggle('show');
+        document.body.classList.add('lock-scroll'); // Khóa cuộn trang
+    }
+    function closeCart() {
+        cart.classList.remove('open');
+        cartOverlay.classList.remove('show');
+        document.body.classList.remove('lock-scroll'); // Mở khóa cuộn trang
+    }
+    cartIcon.addEventListener('click', openCart);
+    cartOverlay.addEventListener('click', closeCart);
+    closeBtn.addEventListener('click', closeCart);
+    
+    toggleCartState();
 })
-        let counterValue = 1;
 
-        function increaseValue() {
-            counterValue++;
-            updateCounter();
-        }
+    const minRange = document.getElementById('min-range');
+    const maxRange = document.getElementById('max-range');
+    const minValue = document.getElementById('min-value');
+    const maxValue = document.getElementById('max-value');
 
-        function decreaseValue() {
-            if (counterValue > 1) {
-                counterValue--;
-                updateCounter();
-            }
-        }
-
-        function updateCounter() {
-            document.getElementById('counter').innerText = counterValue;
-            document.getElementById('decrease').disabled = counterValue === 1;
-        }
-
-        // Initialize the counter display
-        updateCounter();
-
-        const minRange = document.getElementById('min-range');
-const maxRange = document.getElementById('max-range');
-const minValue = document.getElementById('min-value');
-const maxValue = document.getElementById('max-value');
-
-function setSliderValues() {
+    function setSliderValues() {
     const min = parseInt(minRange.value);
     const max = parseInt(maxRange.value);
 
@@ -123,11 +138,34 @@ function setSliderValues() {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
     })}`;
-}
+    }
 
-// Gọi hàm setSliderValues() khi thanh kéo thay đổi giá trị
-minRange.addEventListener('input', setSliderValues);
-maxRange.addEventListener('input', setSliderValues);
+    // Gọi hàm setSliderValues() khi thanh kéo thay đổi giá trị
+    minRange.addEventListener('input', setSliderValues);
+    maxRange.addEventListener('input', setSliderValues);
 
-// Gọi hàm setSliderValues() khi trang được tải
-setSliderValues();
+    // Gọi hàm setSliderValues() khi trang được tải
+    setSliderValues();
+    let counterValue = 1;
+
+    // // tăng giảm sl
+    // function increaseValue() {
+    //     counterValue++;
+    //     updateCounter();
+    // }
+
+    // function decreaseValue() {
+    //     if (counterValue > 1) {
+    //         counterValue--;
+    //         updateCounter();
+    //     }
+    // }
+
+    // function updateCounter() {
+    //     document.getElementById('counter').innerText = counterValue;
+    //     document.getElementById('decrease').disabled = counterValue === 1;
+    // }
+
+    // // Initialize the counter display
+    // updateCounter();
+

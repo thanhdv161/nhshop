@@ -321,5 +321,33 @@ footer {
     background: #17AF26;
   }
 
+/* check-cart */
+.cart {
+    right: -100%;
+}
+.cart.open {
+    right: 0;
+}
+.cart-overlay.show {
+    display: block;
+}
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 16, 11, 0.40);
+    z-index: 20; 
+}
+.transition-right {
+    transition: right 0.4s ease-in-out;
+}
+/* CSS khóa cuộn */
+body.lock-scroll {
+    overflow: hidden;
+}
+
 
 
