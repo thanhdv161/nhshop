@@ -44,11 +44,11 @@
                     </form>
                     <div class="order-2 lg:order-3 flex items-center gap-6 lg:-mr-9">
                         <a href="" class="text-sm lg:text-base">Your Account</a> | 
-                        <button class="relative">
+                        <button class="cart-icon relative">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                             </svg>
-                            <span class="w-4 h-4 rounded-full bg-red-500 text-white absolute -top-1 -right-1 text-[12px]">1</span>
+                            <span class="w-4 h-4 rounded-full bg-red-500 text-white absolute -top-1 -right-1 text-[12px] leading-4 cart-count">0</span>
                         </button>
                     </div>
                 </div>
@@ -72,6 +72,160 @@
             </div>
         </div>
     </header>
+    <div class="cart-overlay"></div>
+    <div class="cart fixed top-0 -right-full lg:mt-0 mt-20 h-full z-30 w-full lg:w-5/12 transition-right whitespace-nowrap overflow-y-scroll lg:grid lg:grid-cols-[40px,auto] lg:gap-4 lg:items-center">
+        <div class="lg:block hidden">
+            <button class="flex items-center justify-center bg-white icon-close p-[10px] rounded-full close-btn ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>                  
+            </button>
+        </div>
+        <div class="bg-white lg:p-8 px-6 py-8 pb-20 h-full lg:rounded-none rounded-t-3xl">
+            <div>
+                <div class="flex items-center justify-between lg:mb-11 mb-9">
+                    <h2 class="text-[#060709] text-xl">Your Cart</h2>
+                    <span class="text-[#9D9EA2] text-lg/[150%] font-light">(<span>0</span>)</span>
+                </div>
+                <div class="cart-empty text-center space-y-16 mt-[120px]">
+                    <div class="rounded-full bg-[#F2F6F4] p-12 flex items-center justify-center w-[160px] h-[160px] mx-auto">
+                        <img src="./assets/svg/icons/bag-2-black.svg" alt="" class="">
+                    </div>
+                    <a href="./shop.html" class="show-product btn mt-10">Show Product</a>
+                </div>
+                <ul class="cart-items">
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex items-center justify-between gap-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="border border-[#F4F4F4] p-1 min-w-[56px] min-h-[56px] flex items-center justify-center">
+                                        <img src="./assets/images/products/product2.png" alt="" class="w-10 h-10">
+                                    </div>
+                                    <p class="text-[#05422C] text-sm/[150%] lg:text-base/[150%] font-medium text-wrap">Mix And Match Shatter/Budder 28g (4 X 7G)</p>
+                                </div>
+                                <button class="rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#F4F4F4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between ml-[72px]">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-[#9D9EA2] text-sm/[150%] font-light">2x</span>
+                                    <span class="text-[#060709] text-sm/[150%]">$120.00</span>
+                                </div>
+                                <div>
+                                    <span class="text-[#060709] text-sm/[150%]">$240.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-[72px] space-y-2">
+                            <div class="flex items-center justify-between gap-10">
+                                <p class="text-[#060709] text-sm/[150%] lg:text-base/[150%] text-wrap">Add Integra Pack - 4g</p>
+                                <button class="rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#F4F4F4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-[#9D9EA2] text-sm/[150%] font-light">1x</span>
+                                    <span class="text-[#060709] text-sm/[150%]">$2.00</span>
+                                </div>
+                                <div>
+                                    <span class="text-[#060709] text-sm/[150%]">$2.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ml-[72px] space-y-2">
+                            <div class="flex items-center justify-between gap-10">
+                                <p class="text-[#060709] text-sm/[150%] lg:text-base/[150%] text-wrap">Add Integra Pack - 8g</p>
+                                <button class="rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#F4F4F4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-[#9D9EA2] text-sm/[150%] font-light">2x</span>
+                                    <span class="text-[#060709] text-sm/[150%]">$3.00</span>
+                                </div>
+                                <div>
+                                    <span class="text-[#060709] text-sm/[150%]">$3.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between ml-[72px] space-y-3 lg:space-y-0 border-t border-[#F4F4F4] pt-4">
+                            <div>
+                                <p class="text-[#9D9EA2] text-sm/[150%]">Subtotal</p>
+                            </div>
+                            <div>
+                                <span class="text-[#060709] text-sm/[150%]">$245.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3 border-t border-[#F4F4F4] mt-4 pt-4">
+                        <div>
+                            <div class="flex items-center justify-between gap-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="border border-[#F4F4F4] p-1 min-w-[56px] min-h-[56px] flex items-center justify-center">
+                                        <img src="./assets/images/products/product5.png" alt="" class="w-10 h-10">
+                                    </div>
+                                    <p class="text-[#05422C] text-sm/[150%] lg:text-base/[150%] font-medium text-wrap">Shipwreck Edibles Gummy</p>
+                                </div>
+                                <button class="rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#F4F4F4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#9D9EA2" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center justify-between ml-[72px]">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-[#9D9EA2] text-sm/[150%] font-light">5x</span>
+                                    <span class="text-[#060709] text-sm/[150%]">$13.00</span>
+                                </div>
+                                <div>
+                                    <span class="text-[#060709] text-sm/[150%]">$65.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ml-[72px] flex items-center justify-between border-y border-[#F4F4F4] my-6 py-6">
+                        <h2 class="text-[#060709] text-sm/[150%]">TOTAL</h2>
+                        <span class="text-[#EB2606] text-xl/[150%] font-medium">$305.00</span>
+                    </div>
+                    <button class="checkout btn lg:h-[56px] lg:px-10 lg:leading-[56px] lg:text-base text-sm">Checkout</button>
+                    <div class="space-y-4 mt-5">
+                        <h4 class="text-[#717378] text-[12px]/[150%] tracking-[1px] font-light">SECURE PAYMENTS PROVIDED BY</h4>
+                        <div class="flex items-center gap-3">
+                            <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                <img src="./assets/svg/bank3.svg" alt="">
+                            </a>
+                            <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                <img src="./assets/svg/bank4.svg" alt="">
+                            </a>
+                            <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                <img src="./assets/svg/bank2.svg" alt="">
+                            </a>
+                            <a href="" class="border border-[#F4F4F4] rounded-md w-[56px] h-[32px] flex items-center justify-center">
+                                <img src="./assets/svg/bank1.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
     <section class="bg-[#F2F6F4]">
         <div class="container">
             <div class="grid grid-cols-3 py-4 lg:py-6 gap-[64px]">
@@ -990,6 +1144,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/star-rating-svg.js"></script>
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
