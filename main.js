@@ -146,9 +146,9 @@ $(document).ready(function(){
 
     // Gọi hàm setSliderValues() khi trang được tải
     setSliderValues();
-    let counterValue = 1;
-
+    
     // // tăng giảm sl
+    // let counterValue = 1;
     // function increaseValue() {
     //     counterValue++;
     //     updateCounter();
