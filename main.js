@@ -42,7 +42,7 @@ $(document).ready(function(){
           },
     });
     var swiperThumbs = new Swiper(".product-detail", {
-        spaceBetween: 30,
+        spaceBetween: 10,
         slidesPerView: 4,
         freeMode: true,
         watchSlidesProgress: true,
@@ -51,6 +51,18 @@ $(document).ready(function(){
         spaceBetween: 10,
         thumbs: {
           swiper: swiperThumbs,
+        },
+      });
+      var swiperThumbs2 = new Swiper(".product-zoom", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+    new Swiper(".product-zoom2", {
+        spaceBetween: 10,
+        thumbs: {
+          swiper: swiperThumbs2,
         },
       });
     $(".my-rating").starRating({
@@ -147,25 +159,4 @@ $(document).ready(function(){
     // Gọi hàm setSliderValues() khi trang được tải
     setSliderValues();
     
-    // // tăng giảm sl
-    // let counterValue = 1;
-    // function increaseValue() {
-    //     counterValue++;
-    //     updateCounter();
-    // }
-
-    // function decreaseValue() {
-    //     if (counterValue > 1) {
-    //         counterValue--;
-    //         updateCounter();
-    //     }
-    // }
-
-    // function updateCounter() {
-    //     document.getElementById('counter').innerText = counterValue;
-    //     document.getElementById('decrease').disabled = counterValue === 1;
-    // }
-
-    // // Initialize the counter display
-    // updateCounter();
 

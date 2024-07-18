@@ -349,5 +349,47 @@ body.lock-scroll {
     overflow: hidden;
 }
 
+/* product-detail */
+.product-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    display: none;
+}
+
+.product-overlay.show {
+    display: block;
+}
+.large-slide {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.large-slide.open {
+    display: block;
+}
+
+/* CSS cho phần tử chính của swiper */
+.product-zoom2,
+.product-zoom {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.swiper .product-zoom {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
 
 
+
+  
