@@ -1,0 +1,399 @@
+@layer tailwind-base, antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Lexend", sans-serif;
+}
+.container{
+    @apply max-w-7xl mx-auto px-4;
+}
+.main-title{
+    @apply font-semibold text-[32px]/[120%] mb-4 lg:mb-6 lg:text-[64px]/[110%] -tracking-[1.5px] lg:-tracking-[4px];
+}
+.btn {
+    @apply h-[40px] leading-[40px] bg-[#17AF26] rounded-full text-white inline-block text-sm px-6 transition ease-in-out duration-300;
+}
+.btn:hover{
+    @apply bg-green-700 shadow-md;
+}
+.btn-lg{
+    @apply h-[64px] leading-[64px] px-28 text-lg;
+}
+@media (min-width: 768px){
+    .lg\:btn-lg{
+        @apply h-[64px] leading-[64px] px-28 text-lg;
+    }
+}
+@media (min-width: 1024px){
+    .lg\:btn-lg{
+        @apply h-[64px] leading-[64px] px-28 text-lg;
+    }
+}
+.out-of-stock{
+    background: rgb(26 , 30, 38, 0.3);
+    backdrop-filter: blur(4px);
+}
+footer {
+    background: linear-gradient(180deg, #1a1e26 0%, #01100b 100%);
+}
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 12px; /* Add margin to create space between values and slider */
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interference between the sliders */
+    z-index: 2; /* Ensure sliders are above the track */
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    pointer-events: all; /* Allow interaction with the thumbs */
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 50%;
+    pointer-events: all; /* Allow interaction with the thumbs */
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.slider-track {
+    width: 100%;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Ensure track is below the sliders */
+}
+
+.slider-values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-values span {
+    background: #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.custom-radio input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio input[type="radio"]:checked {
+    background-color: #17AF26;
+    border-color: #17AF26;
+}
+
+.custom-radio input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-radio input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(23, 175, 38, 0.5);
+}
+/* custom 1 */
+.custom-radio2 input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio2 input[type="radio"]:checked {
+    background-color: #17AF26;
+    border-color: #17AF26;
+}
+
+.custom-radio2 input[type="radio"]:checked::after {
+    content: '';
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-radio2 input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(23, 175, 38, 0.5);
+}
+
+/* checkbox */
+.custom-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #e5e7eb; /* gray-200 */
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked {
+    background-color: #17AF26;
+    border-color: #17AF26;
+}
+
+.custom-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    display: block;
+    width: 0.3rem;
+    height: 0.6rem;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(23, 175, 38, 0.5);
+}
+/* count */
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.counter-button {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.counter-button:disabled {
+    cursor: not-allowed;
+}
+
+.counter-display {
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+}
+
+/* button on off */
+.checkbox-wrapper-6 .tgl {
+    display: none;
+  }
+  .checkbox-wrapper-6 .tgl,
+  .checkbox-wrapper-6 .tgl:after,
+  .checkbox-wrapper-6 .tgl:before,
+  .checkbox-wrapper-6 .tgl *,
+  .checkbox-wrapper-6 .tgl *:after,
+  .checkbox-wrapper-6 .tgl *:before,
+  .checkbox-wrapper-6 .tgl + .tgl-btn {
+    box-sizing: border-box;
+  }
+  .checkbox-wrapper-6 .tgl::-moz-selection,
+  .checkbox-wrapper-6 .tgl:after::-moz-selection,
+  .checkbox-wrapper-6 .tgl:before::-moz-selection,
+  .checkbox-wrapper-6 .tgl *::-moz-selection,
+  .checkbox-wrapper-6 .tgl *:after::-moz-selection,
+  .checkbox-wrapper-6 .tgl *:before::-moz-selection,
+  .checkbox-wrapper-6 .tgl + .tgl-btn::-moz-selection,
+  .checkbox-wrapper-6 .tgl::selection,
+  .checkbox-wrapper-6 .tgl:after::selection,
+  .checkbox-wrapper-6 .tgl:before::selection,
+  .checkbox-wrapper-6 .tgl *::selection,
+  .checkbox-wrapper-6 .tgl *:after::selection,
+  .checkbox-wrapper-6 .tgl *:before::selection,
+  .checkbox-wrapper-6 .tgl + .tgl-btn::selection {
+    background: none;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 49px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:after,
+  .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:after {
+    left: 0;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+    display: none;
+  }
+  .checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+    left: 50%;
+  }
+
+  .checkbox-wrapper-6 .tgl-light + .tgl-btn {
+    background: #C8C9CB;
+    border-radius: 2em;
+    padding: 2px;
+    transition: all 0.4s ease;
+  }
+  .checkbox-wrapper-6 .tgl-light + .tgl-btn:after {
+    border-radius: 100%;
+    background: #fff;
+    transition: all 0.2s ease;
+  }
+  .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+    background: #17AF26;
+  }
+
+/* check-cart */
+.cart {
+    right: -100%;
+}
+.cart.open {
+    right: 0;
+}
+.cart-overlay.show {
+    display: block;
+}
+.cart-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 16, 11, 0.40);
+    z-index: 20; 
+}
+.transition-right {
+    transition: right 0.4s ease-in-out;
+}
+/* CSS khóa cuộn */
+body.lock-scroll {
+    overflow: hidden;
+}
+
+/* product-detail */
+.product-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    display: none;
+}
+
+.product-overlay.show {
+    display: block;
+}
+.large-slide {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.large-slide.open {
+    display: block;
+}
+
+/* CSS cho phần tử chính của swiper */
+.product-zoom2,
+.product-zoom {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.swiper .product-zoom {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+  }
+
+
+
+  
