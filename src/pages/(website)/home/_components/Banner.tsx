@@ -1,10 +1,11 @@
+import { svg1, svg2, svg3 } from "@/components/icons"
 
 type Props = {}
 
 const Banner = (props: Props) => {
   return (
    <div>
-  <section className="bg-[url('./images/banner-mobile.jpg')] lg:bg-[url('./images/banner-desktop.jpg')] bg-no-repeat bg-cover bg-center text-white min-h-[720px] flex py-[56px] lg:py-0 lg:items-center">
+  <section className="bg-[url('./assets/images/banner-mobile.jpg')] lg:bg-[url('./assets/images/banner-desktop.jpg')] bg-no-repeat bg-cover bg-center text-white min-h-[720px] flex py-[56px] lg:py-0 lg:items-center">
     <div className="container">
       <div className="lg:w-2/3">
         <span className="text-[#F2BC1B] block mb-4 text-sm tracking-[4px] lg:text-base">BEST SELLER</span>
@@ -24,7 +25,7 @@ const Banner = (props: Props) => {
         <div className="grid grid-cols-[64px,auto] lg:grid-cols-[100px,auto] gap-6">
           <div>
             <div className="bg-[#FFFFFF] rounded-full h-[64px] lg:h-[100px] flex items-center justify-center">
-              <img src="./svg/1.svg" alt='' className="w-[36px] lg:w-[56px]" />
+              <img src={svg1} alt='' className="w-[36px] lg:w-[56px]" />
             </div>
           </div>
           <div>
@@ -35,7 +36,7 @@ const Banner = (props: Props) => {
         <div className="grid grid-cols-[64px,auto] lg:grid-cols-[100px,auto] gap-6">
           <div>
             <div className="bg-[#FFFFFF] rounded-full h-[64px] lg:h-[100px] flex items-center justify-center">
-              <img src="./svg/2.svg" alt='' className="w-[36px] lg:w-[56px]" />
+              <img src={svg2} alt='' className="w-[36px] lg:w-[56px]" />
             </div>
           </div>
           <div>
@@ -46,7 +47,7 @@ const Banner = (props: Props) => {
         <div className="grid grid-cols-[64px,auto] lg:grid-cols-[100px,auto] gap-6">
           <div>
             <div className="bg-[#FFFFFF] rounded-full h-[64px] lg:h-[100px] flex items-center justify-center">
-              <img src="./svg/3.svg" alt='' className="w-[36px] lg:w-[56px]" />
+              <img src={svg3} alt='' className="w-[36px] lg:w-[56px]" />
             </div>
           </div>
           <div>

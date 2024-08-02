@@ -3,7 +3,6 @@ import instance from '@/configs/axios'
 import { PlusOutlined } from '@ant-design/icons'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Button, message, Popconfirm, Skeleton, Table } from 'antd'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 type Props = {}
@@ -17,16 +16,17 @@ const ProductsManagementPage = (props: Props) => {
             try {
                 return await instance.get(`/products`);
             } catch (error) {
-                throw new Error("Call Api thất bại!")
+                throw new Error((error as any).message)
             }
         }
     })
+    
     const {mutate} = useMutation({
         mutationFn: async (id: number | string) => {
             try {
                 return await instance.delete(`/products/${id}`)
             } catch (error) {
-                throw new Error("Xóa sản phẩm thất bại!")
+                throw new Error((error as any).message)
             }
         },
         onSuccess: () => {
@@ -45,7 +45,13 @@ const ProductsManagementPage = (props: Props) => {
               });
         }
     })
-    const dataSource = data?.data.map((product: IProduct) => ({
+    const createFilters = (products: IProduct[]) => {
+        return products
+            .map((product: IProduct) => product.name)
+            .filter((value: string, index: number, self: string[]) => self.indexOf(value) === index)
+            .map((name: string) => ({ text: name, value: name }));
+    };
+    const dataSource = data?.data?.data.map((product: IProduct) => ({
         key: product._id,
         ...product
     }))
@@ -54,23 +60,38 @@ const ProductsManagementPage = (props: Props) => {
             title: "Tên sản phẩm",
             dataIndex: 'name',
             key: "name",
+            filterSearch: true,
+            filters: data ? createFilters(data?.data?.data) : [],
+            onFilter: (value: string, product: IProduct) => product.name.includes(value),
+            sorter: (a: IProduct, b: IProduct) => a.name.localeCompare(b.name),
+            sortDirections: ["ascend", "descend"],
         },
         {
             title: "Giá sản phẩm",
             dataIndex: 'price',
             key: "price",
+            sorter: (a: IProduct, b: IProduct) => a.price - b.price,
+            render: (price: number) =>
+                new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(
+                    price
+                ),
+
         },
         {
             title: "Ảnh",
             dataIndex: 'image',
             key: "image",
-            render: (image: string, record: any) => (
-                <img
-                  src={image}
-                  alt={record.name}
-                  style={{ width: 100, height: 100, objectFit: 'cover' }} // Điều chỉnh kích thước và cách hiển thị
-                />
-              ),
+            render: (image: string, record: any) => {
+                console.log(image[0]);
+                
+                return (
+                    <img
+                    src={image[0]}
+                    alt={record.name}
+                    style={{ width: 100, height: 100, objectFit: 'cover' }} 
+                  />
+                )
+            }
         },
         {
             title: "Mô tả",
@@ -96,7 +117,7 @@ const ProductsManagementPage = (props: Props) => {
         {
             title: "Tags",
             dataIndex: 'tags',
-            key: "tags",
+            key: "tags"
         },
         {
             key: "action",
@@ -119,6 +140,7 @@ const ProductsManagementPage = (props: Props) => {
     ]
     
     if(isLoading) return <div>Loading...</div>
+    if(isError) return <div>{error.message}</div>
   return (
     <div>
         {contextHolder}
