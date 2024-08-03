@@ -3,7 +3,7 @@ import { StatusCodes } from "http-status-codes";
 import Joi from "joi";
 import jwt from "jsonwebtoken";
 import User from "../models/user";
-import BlacklistedToken from "../models/black-listed-token";
+import BlacklistedToken from '../models/black-listed-token'
 
 const signupSchema = Joi.object({
     name: Joi.string().min(3).max(30).messages({

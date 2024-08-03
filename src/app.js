@@ -16,5 +16,5 @@ connectDB("mongodb://localhost:27017/nhshop");
 
 app.use("/api", productRouter);
 app.use("/api", categoryRouter);
-app.use("/api", authRouter);
+// app.use("/api", authRouter);
 export const viteNodeApp = app;
